@@ -15,19 +15,13 @@ namespace Integrando_BD
     {
         Dentista objDentista;
         Conexao con;
+        Boolean novo;
 
         public FrmDentista()
         {
             InitializeComponent();
             con = new Conexao();
-        }
-
-        private void btnNovo_Click(object sender, EventArgs e)
-        {
-            con.conectar();
-            limparCampos();
-            gerenciarCampos(false);
-        }
+        }        
 
         public void atualizarGrid()
         {
@@ -68,8 +62,9 @@ namespace Integrando_BD
 
         private void FrmDentista_Load(object sender, EventArgs e)
         {
+            dgvDados.Enabled = false;            
             atualizarGrid();
-            gerenciarCampos(true);
+            gerenciarCampos(true);            
         }
         
         public void limparDados()
@@ -126,34 +121,67 @@ namespace Integrando_BD
 
             rbFeminino.Checked = dgvDados.CurrentRow.Cells[3].Value.Equals("F");
             rbMasculino.Checked = dgvDados.CurrentRow.Cells[3].Value.Equals("M");
-        }   
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {            
+            novo = true;
+            limparCampos();
+            gerenciarCampos(false);
+        }
 
         private void btn_salvar_Click(object sender, EventArgs e)
         {
             DialogResult salvar = MessageBox.Show("Deseja realmente salvar os dados?", "Alerta!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(salvar == DialogResult.Yes)
             {
-                lerDados();
-                String sql = "insert into tb_dentista " + "values (" + objDentista.id + ", '" +
-                    objDentista.nome + "', '" +
-                    objDentista.Cro + "', '" +
-                    objDentista.Sexo + "', " +
-                    objDentista.Instagram + ", " +
-                    objDentista.Facebook + ", " +
-                    objDentista.Twitter + ", " +
-                    objDentista.LinkedIn + ") ";
-
-                if (con.executar(sql) == 1)
+                if (novo)
                 {
-                    MessageBox.Show("Dados salvos com sucesso!");
+                    lerDados();
+                    String sql = "insert into tb_dentista " + "values (" + objDentista.id + ", '" +
+                        objDentista.nome + "', '" +
+                        objDentista.Cro + "', '" +
+                        objDentista.Sexo + "', " +
+                        objDentista.Instagram + ", " +
+                        objDentista.Facebook + ", " +
+                        objDentista.Twitter + ", " +
+                        objDentista.LinkedIn + ") ";
+
+                    if (con.executar(sql) == 1)
+                    {
+                        MessageBox.Show("Dados salvos com sucesso!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Dados não foram salvos!");
+                    }                    
                 }
                 else
                 {
-                    MessageBox.Show("Dados não foram salvos!");
+                    lerDados();
+                    String sql = "update tb_dentista " + "set " +
+                        "nome = '" +objDentista.nome + "', "+
+                        "CRO = '" +objDentista.Cro + "', " +
+                        "sexo = '" +objDentista.Sexo + "', " +
+                        "instagram = " +objDentista.Instagram + ", " +
+                        "facebook = " +objDentista.Facebook + ", " +
+                        "twitter = " +objDentista.Twitter + ", " +
+                        "linkedin = " +objDentista.LinkedIn + " where id_dentista = " + objDentista.id;
+
+                    if (con.executar(sql) == 1)
+                    {
+                        MessageBox.Show("Dados salvos com sucesso!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Dados não foram salvos!");
+                    }
                 }
+                
 
                 gerenciarCampos(true);
                 atualizarGrid();
+                dgvDados.Enabled = false;
             }            
         }
 
@@ -179,6 +207,14 @@ namespace Integrando_BD
                 gerenciarCampos(true);
                 atualizarGrid();
             }           
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            novo = false;
+            gerenciarCampos(false);
+            dgvDados.Visible = true;
+            dgvDados.Enabled = true;            
         }
     }
 }

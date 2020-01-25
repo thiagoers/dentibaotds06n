@@ -10,3 +10,18 @@ C:\Users\Aluno\Documents\Visual Studio 2015\Projects\Integrando BD\Integrando BD
 C:\Users\Aluno\Documents\Visual Studio 2015\Projects\Integrando BD\Integrando BD\obj\Debug\Integrando_BD.FrmPaciente.resources
 C:\Users\Aluno\Documents\Visual Studio 2015\Projects\Integrando BD\Integrando BD\obj\Debug\Integrando_BD.FrmConsulta.resources
 C:\Users\Aluno\Documents\Visual Studio 2015\Projects\Integrando BD\Integrando BD\obj\Debug\Integrando_BD.Menu.resources
+C:\Users\Aluno\Desktop\dentibaotds06n-master\Integrando BD\Integrando BD\bin\Debug\Integrando BD.exe.config
+C:\Users\Aluno\Desktop\dentibaotds06n-master\Integrando BD\Integrando BD\obj\Debug\Integrando BD.exe
+C:\Users\Aluno\Desktop\dentibaotds06n-master\Integrando BD\Integrando BD\obj\Debug\Integrando BD.pdb
+C:\Users\Aluno\Documents\Visual Studio 2015\Projects\dentibaotds06n-master\Integrando BD\Integrando BD\bin\Debug\Integrando BD.exe.config
+C:\Users\Aluno\Documents\Visual Studio 2015\Projects\dentibaotds06n-master\Integrando BD\Integrando BD\obj\Debug\Integrando BD.exe
+C:\Users\Aluno\Documents\Visual Studio 2015\Projects\dentibaotds06n-master\Integrando BD\Integrando BD\obj\Debug\Integrando BD.pdb
+C:\Users\Aluno\Documents\Visual Studio 2015\Projects\dentibaotds06n-master\Integrando BD\Integrando BD\bin\Debug\Integrando BD.exe
+C:\Users\Aluno\Documents\Visual Studio 2015\Projects\dentibaotds06n-master\Integrando BD\Integrando BD\bin\Debug\Integrando BD.pdb
+C:\Users\Aluno\Documents\Visual Studio 2015\Projects\dentibaotds06n-master\Integrando BD\Integrando BD\obj\Debug\Integrando BD.csprojResolveAssemblyReference.cache
+C:\Users\Aluno\Documents\Visual Studio 2015\Projects\dentibaotds06n-master\Integrando BD\Integrando BD\obj\Debug\Integrando_BD.FrmConsulta.resources
+C:\Users\Aluno\Documents\Visual Studio 2015\Projects\dentibaotds06n-master\Integrando BD\Integrando BD\obj\Debug\Integrando_BD.FrmDentista.resources
+C:\Users\Aluno\Documents\Visual Studio 2015\Projects\dentibaotds06n-master\Integrando BD\Integrando BD\obj\Debug\Integrando_BD.FrmPaciente.resources
+C:\Users\Aluno\Documents\Visual Studio 2015\Projects\dentibaotds06n-master\Integrando BD\Integrando BD\obj\Debug\Integrando_BD.Menu.resources
+C:\Users\Aluno\Documents\Visual Studio 2015\Projects\dentibaotds06n-master\Integrando BD\Integrando BD\obj\Debug\Integrando_BD.Properties.Resources.resources
+C:\Users\Aluno\Documents\Visual Studio 2015\Projects\dentibaotds06n-master\Integrando BD\Integrando BD\obj\Debug\Integrando BD.csproj.GenerateResource.Cache

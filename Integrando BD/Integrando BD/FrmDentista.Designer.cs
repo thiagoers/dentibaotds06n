@@ -48,6 +48,7 @@
             this.chbFacebook = new System.Windows.Forms.CheckBox();
             this.chbTwitter = new System.Windows.Forms.CheckBox();
             this.chbInstagram = new System.Windows.Forms.CheckBox();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -56,7 +57,7 @@
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(42, 12);
+            this.btnNovo.Location = new System.Drawing.Point(58, 12);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(78, 36);
             this.btnNovo.TabIndex = 0;
@@ -84,7 +85,7 @@
             this.txtNome.Location = new System.Drawing.Point(152, 26);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(205, 20);
-            this.txtNome.TabIndex = 5;
+            this.txtNome.TabIndex = 2;
             // 
             // label3
             // 
@@ -139,7 +140,7 @@
             // 
             // btn_salvar
             // 
-            this.btn_salvar.Location = new System.Drawing.Point(164, 12);
+            this.btn_salvar.Location = new System.Drawing.Point(142, 12);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(78, 36);
             this.btn_salvar.TabIndex = 5;
@@ -149,7 +150,7 @@
             // 
             // btn_excluir
             // 
-            this.btn_excluir.Location = new System.Drawing.Point(411, 12);
+            this.btn_excluir.Location = new System.Drawing.Point(394, 12);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(78, 36);
             this.btn_excluir.TabIndex = 7;
@@ -159,7 +160,7 @@
             // 
             // btn_cancelar
             // 
-            this.btn_cancelar.Location = new System.Drawing.Point(291, 12);
+            this.btn_cancelar.Location = new System.Drawing.Point(226, 12);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(78, 36);
             this.btn_cancelar.TabIndex = 6;
@@ -184,7 +185,7 @@
             this.rbFeminino.Location = new System.Drawing.Point(93, 18);
             this.rbFeminino.Name = "rbFeminino";
             this.rbFeminino.Size = new System.Drawing.Size(31, 17);
-            this.rbFeminino.TabIndex = 1;
+            this.rbFeminino.TabIndex = 5;
             this.rbFeminino.Text = "F";
             this.rbFeminino.UseVisualStyleBackColor = true;
             // 
@@ -195,7 +196,7 @@
             this.rbMasculino.Location = new System.Drawing.Point(20, 18);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(34, 17);
-            this.rbMasculino.TabIndex = 0;
+            this.rbMasculino.TabIndex = 4;
             this.rbMasculino.TabStop = true;
             this.rbMasculino.Text = "M";
             this.rbMasculino.UseVisualStyleBackColor = true;
@@ -219,7 +220,7 @@
             this.chbLinkedIn.Location = new System.Drawing.Point(254, 19);
             this.chbLinkedIn.Name = "chbLinkedIn";
             this.chbLinkedIn.Size = new System.Drawing.Size(67, 17);
-            this.chbLinkedIn.TabIndex = 3;
+            this.chbLinkedIn.TabIndex = 9;
             this.chbLinkedIn.Text = "LinkedIn";
             this.chbLinkedIn.UseVisualStyleBackColor = true;
             // 
@@ -229,7 +230,7 @@
             this.chbFacebook.Location = new System.Drawing.Point(174, 19);
             this.chbFacebook.Name = "chbFacebook";
             this.chbFacebook.Size = new System.Drawing.Size(74, 17);
-            this.chbFacebook.TabIndex = 2;
+            this.chbFacebook.TabIndex = 8;
             this.chbFacebook.Text = "Facebook";
             this.chbFacebook.UseVisualStyleBackColor = true;
             // 
@@ -239,7 +240,7 @@
             this.chbTwitter.Location = new System.Drawing.Point(110, 19);
             this.chbTwitter.Name = "chbTwitter";
             this.chbTwitter.Size = new System.Drawing.Size(58, 17);
-            this.chbTwitter.TabIndex = 1;
+            this.chbTwitter.TabIndex = 7;
             this.chbTwitter.Text = "Twitter";
             this.chbTwitter.UseVisualStyleBackColor = true;
             // 
@@ -249,15 +250,26 @@
             this.chbInstagram.Location = new System.Drawing.Point(29, 19);
             this.chbInstagram.Name = "chbInstagram";
             this.chbInstagram.Size = new System.Drawing.Size(75, 17);
-            this.chbInstagram.TabIndex = 0;
+            this.chbInstagram.TabIndex = 6;
             this.chbInstagram.Text = "Instragram";
             this.chbInstagram.UseVisualStyleBackColor = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(310, 12);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(78, 36);
+            this.btnEditar.TabIndex = 10;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // FrmDentista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 371);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btn_excluir);
@@ -302,6 +314,7 @@
         private System.Windows.Forms.CheckBox chbFacebook;
         private System.Windows.Forms.CheckBox chbTwitter;
         private System.Windows.Forms.CheckBox chbInstagram;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
 
